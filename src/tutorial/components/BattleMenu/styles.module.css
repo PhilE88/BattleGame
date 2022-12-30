@@ -1,0 +1,60 @@
+.main {
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 100%;
+
+  gap: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main> :first-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.option,
+.off {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 5px #000;
+
+  background-color: #821400;
+  background-image: url('../../../assets/bgRedTexture.jpg');
+  background-size: cover;
+  opacity: 0.8;
+
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+.off {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.option:hover {
+  /* background-color: #fd9401; */
+  opacity: 1;
+  animation: scroll 5s linear infinite alternate;
+}
+
+@keyframes scroll {
+  0% {
+    background-position: 0cm 0cm;
+  }
+
+  100% {
+    background-position: 140cm 100cm;
+  }
+}
+
+.option:active {
+  scale: 0.94;
+}
